@@ -1,4 +1,4 @@
-# bet-rate-cli
+# everscale-bet-rates
 
 ## Demo
 ```
