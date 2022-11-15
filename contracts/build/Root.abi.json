@@ -1,0 +1,154 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"owner","type":"address"},
+				{"name":"tokenRoot","type":"address"},
+				{"name":"pairRoot","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getUserBets",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"userBets","type":"map(uint128,address[])"}
+			]
+		},
+		{
+			"name": "getDetails",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"tokenRoot","type":"address"},
+				{"name":"pairRoot","type":"address"},
+				{"name":"timestamp","type":"uint128"},
+				{"name":"endRound","type":"uint128"},
+				{"name":"endBidding","type":"uint128"},
+				{"name":"active","type":"bool"}
+			]
+		},
+		{
+			"name": "bet",
+			"inputs": [
+				{"name":"rate","type":"uint128"},
+				{"name":"user","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "completeRound",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onExpectedExchangeResp",
+			"inputs": [
+				{"name":"expected_amount","type":"uint128"},
+				{"name":"expected_fee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "kill",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_userBets",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_userBets","type":"map(uint128,address[])"}
+			]
+		},
+		{
+			"name": "_nextRoundTimestamp",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_nextRoundTimestamp","type":"uint128"}
+			]
+		},
+		{
+			"name": "_registeredFunds",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_registeredFunds","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_nonce","type":"uint16"}
+	],
+	"events": [
+		{
+			"name": "RoundComplated",
+			"inputs": [
+				{"name":"rate","type":"uint128"},
+				{"name":"winners","type":"address[]"},
+				{"name":"reward","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "RoundError",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"oldOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_owner","type":"address"},
+		{"name":"_nonce","type":"uint16"},
+		{"name":"_userBets","type":"map(uint128,address[])"},
+		{"name":"_nextRoundTimestamp","type":"uint128"},
+		{"name":"_registeredFunds","type":"uint128"},
+		{"name":"_active","type":"bool"},
+		{"name":"_tokenRoot","type":"address"},
+		{"name":"_pairRoot","type":"address"}
+	]
+}
