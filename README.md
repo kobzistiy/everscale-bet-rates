@@ -1,9 +1,8 @@
 # everscale-bet-rates
 
 ## Demo
-```
-[site for demo](https://ever-bet-rates.cf)
-```
+
+[Demo site](https://ever-bet-rates.cf)
 
 ## Description and rules of the game "Everscale Bet Rates".
 ```
